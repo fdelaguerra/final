@@ -1,0 +1,49 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin:5rem;
+}
+.heading {
+    margin-left: 5rem;
+}
+.byline {
+    font-weight: 700;
+    font-size: 150%;
+}
+
+.small {
+    font-size: 90%;
+}
+.list {
+    height: 1200px;
+}
+/* Media Queries */
+@media screen and (max-width:450px){
+    header {
+      flex-wrap: wrap;
+  }
+  nav ul li {
+      margin-left: 1rem;
+      font-size: 100%;
+  }  
+  .list {
+      height: auto;
+  }
+
+  }
+  @media screen and (max-width:700px){
+    header {
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        margin-left: 1rem;
+        font-size: 100%;
+    }
+    .center {
+        flex-wrap: nowrap;
+    }
+    .list {
+        height: auto;
+    }
+}

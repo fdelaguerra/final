@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Stories</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin:500,700|PT+Serif:400,400i" rel="stylesheet">
+
+    <!-- with Playfair Display
+    <link href="https://fonts.googleapis.com/css?family=Cabin:500|PT+Serif|Playfair+Display:400,400i" rel="stylesheet">
+  -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stories.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script> type="text/javascript">
+    google.charts.load('current', {
+      packages: ['corechart', 'bar', 'geochart']
+    });,   
+        'mapsApiKey': 'AIzaSyDWTjcJ6u-w1MlJE-XrxdfI7aOBCegWVQU'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Population'],
+          ['CD', 84004989],
+          ['France', 67401000],
+          ['Canada', 36879800],
+          ['Madagascar', 24235400],
+          ['Cameroon', 23345200],
+          ['Ivory Coast', 22701600],
+          ['Niger', 19899100],
+          ['Burkina Faso', 18105600],
+          ['Mali', 17599700],
+          ['Senegal', 15129300],
+          ['Chad', 14037500],
+          ['Guinea', 12608600],
+          ['Rwanda', 11607700],
+          ['Belgium', 11358357],
+          ['Burundi', 11178900],
+          ['Benin', 10879800],
+          ['Haiti', 10711100],
+          ['Switzerland', 8510000],
+          ['Togo', 7304600],
+          ['Central African Republic', 4900300],
+          ['CG', 4620300],
+          ['Gabon', 1725300],
+          ['Equatorial Guinea', 1221490],
+          ['Djibouti', 887861],
+          ['Comoros', 795601],
+          ['Luxembourg', 602900],
+          ['Vanuatu', 264652],
+          ['Seychelles', 92900],
+          ['Monaco', 38731],
+        ]);
+
+        var options = {
+colorAxis: {colors: ['#8997bf', '#6d79ab', '#3a4c7f']},
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+
+    google.charts.setOnLoadCallback(drawRightY);
+    
+    function drawRightY() {
+      var data = google.visualization.arrayToDataTable([
+        ['Language', 'Number of Speakers', { role: 'style' }],
+        ['Mandarin', 918000000, '#E1756B'],
+        ['Spanish', 460000000, '#E99A93'],
+        ['English', 379000000, '#E99A93'],
+        ['Hindi', 341000000, '#E99A93'],
+        ['Arabic', 319000000, '#E99A93'],
+      ]);
+    
+      var materialOptions = {
+        chart: {
+          title: 'Most Spoken Languages in the World',
+          subtitle: 'Based on Ethnologue data'
+        },
+        hAxis: {
+          title: 'Total Population',
+          minValue: 0,
+        },
+        
+        vAxis: {
+          title: 'Language'
+        },
+        bars: 'horizontal',
+        colors:['#E1756B','#E99A93','#E99A93','#E99A93','#E99A93'],
+        axes: {
+          y: {
+            0: {
+              side: 'left'
+            }
+          }
+        }
+      };
+      var materialChart = new google.charts.Bar(document.getElementById('bar_chart_div'));
+      materialChart.draw(data, materialOptions);
+    }
+    </script>
+  </head>
+
+  <body>
+    <header>
+
+      <h1>A Common Language</h1>
+
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Connect</a></li>
+          <li><a href="#top">Stories</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </nav>
+
+
+    </header>
+<div class="tagline"></div>
+    <main>
+
+<h2 id="top">Gallery</h2>
+<div class="gallery" id="gallery">
+
+        <div class="thumbnail" id="l1">
+            <a id="p1" href="#f1"><img src="images/samira.png" alt="photo of Samira"></a>
+        </div>
+
+        <div class="thumbnail" id="l2">
+            <a id="l2" href="#f2"><img src="images/marc.png" alt="photo of Marc"></a>
+        </div>
+
+        <div class="thumbnail" id="l3">
+            <a id="l3" href="#f3"><img src="images/irene.png" alt="photo of Irene"></a>
+        </div>
+
+        <div class="thumbnail" id="l4">
+            <a id="l4" href="#f4"><img src="images/haram.png" alt="photo of Haram"></a>
+        </div>
+
+        <div class="thumbnail" id="l5">
+            <a id="l5" href="#f5"><img src="images/katie2.png" alt="photo of Katie"></a>
+        </div>
+
+        <div class="thumbnail" id="l6">
+            <a id="l6" href="#f6"><img src="images/hunter.png" alt="photo of Hunter"></a>
+        </div>
+
+    </div>
+
+        <!-- features -->
+        <div class="container-flex">
+
+          <!-- maybe<article> a grid for sidebars-->
+<section class="outer">
+<article>
+        <div class="subgrid" id="f1">  
+            <div class="chart"></div>  
+
+            <div class="feat">
+                <iframe  width="560" height="315" src="https://www.youtube.com/embed/pa8xm3q_VQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Samira</h3>
+                <dl>
+                    <dt>Hometown:</dt>
+                    <dd>Orlando, Florida</dd>
+                    <dt>Language:</dt>
+                    <dd>Japanese</dd>
+                </dl>
+                <p class="bio">
+                    Samira is a Health Education and Behavior student at the University of Florida.
+                </p>
+                <p>
+                    She can speak English, Bangla, French and Japanese. Speaking different languages has helped her broaden her communication skills and learn to appreciate other cultures and traditions.
+                </p>
+                <p>
+                    Her advice to language learners: “You need to continuously study because all the vocabulary or grammar you learn one day will disappear from you head the next.”
+                </p>
+                <p><a href="#top" id="b1">Back to Gallery</a></p>
+            </div>
+        </div>
+ </article>
+<article>
+        <div class="subgrid" id="f2">  
+            <div class="chart"></div>  
+
+            <div class="feat">
+                <iframe  width="560" height="315" src="https://www.youtube.com/embed/2_xNzhcVKVc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Marc</h3>
+                <dl>
+                    <dt>Hometown:</dt>
+                    <dd>Tarragona</dd>
+                    <dt>Language:</dt>
+                    <dd>German</dd>
+                </dl>
+                <p class="bio">
+                    Marc is pursuing a doctorate in Mechanical Engineering at the University of Florida. He speaks 5 languages: Catalan, Spanish, English, German and French.
+                </p>
+                <p>
+                    He grew up in Catalonia, where both Catalan and Spanish are official languages. He learned both languages as a result, but considers Catalan to be his mother tongue.
+                </p>
+                <p>
+                    He decided to learn German at age 14, guided by his interest in engineering. Since Germany is a nexus for engineering in Europe, he knew he would eventually need to speak German to communicate with his colleagues. 
+                </p>
+                <p>
+                    He ended up pursuing a master’s degree in Germany.
+                </p>
+                <p>
+                    His best experience with the language? He is proud of defending his master’s thesis in German—followed closely by the first time he dreamt in German while living abroad. 
+                </p>
+                <p>
+                    His advice to language learners: “Practice, practice, practice. Don’t be shy; even if you aren’t totally confident, speaking is how I learned the most.”
+                </p>
+                <p>
+                    Marc used German to advance his engineering career. It just goes to show that if you can dream it, then you can do it. And if you’re lucky, you might even dream it in German.
+                </p>
+                <p><a href="#top" id="b2">Back to Gallery</a></p>
+
+            </div>
+        </div>
+</article>  
+<article>
+        <div class="subgrid" id="f3">  
+            
+   
+            <div class="feat">
+                <iframe  width="560" height="315" src="https://www.youtube.com/embed/UNgkeY5YyB4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Irene</h3>
+                <dl>
+                    <dt>Hometown:</dt>
+                    <dd>Madrid, Spain</dd>
+                    <dt>Language:</dt>
+                    <dd>Catalan</dd>
+                </dl>
+                <p class="bio">
+                    Irene is currently pursuing a master’s degree in Mass Communications. She speaks Spanish, English, Catalan, French and a bit of German. A native Spanish speaker, she learned English and French in school. 
+                </p>
+                <p>
+                    She started learning Catalan when she began dating her husband from Tarragona, since he spoke with his friends and family in Catalan. 
+                </p>
+                <p>                    
+                    Learning languages has opened up many opportunities for her. She has studied in the United States in two different stints. Catalan has helped her grow closer with her husband’s family and friends. She has also found apologizing in Catalan an effective tool for placating an angry husband.  
+                </p>
+                <p>                    
+                    Her advice to language learners:<br>
+                    Immerse yourself in the language. Her English improved considerably when she started watching TV and reading books in English. For those looking to learn English, she found “Friends” to be a valuable resource.
+                </p>
+            </div>
+            <div class="chart">
+                    <iframe width="417.8825834542816" height="258.0506465517241" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThW07qT12cDmxJ959Zbcb6BA0XKmtFSmX3s_9aoiput6ZSs-kHDtu_o_-xPpzH82SXWoQqJ_fJP23t/pubchart?oid=2128868817&amp;format=interactive"></iframe>
+            </div>
+            <p><a href="#top" id="b3">Back to Gallery</a></p>
+
+        </div>
+    </article>  
+<article>
+        <div class="subgrid" id="f4">
+            
+            
+            <div class="feat">
+                <iframe  width="560" height="315" src="https://www.youtube.com/embed/qKCUY2mFdP8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Haram</h3>
+                <dl>
+                    <dt>Hometown:</dt>
+                    <dd>Busan, South Korea</dd>
+                    <dt>Language:</dt>
+                    <dd>Mandarin</dd>
+                </dl>
+                <p class="bio">
+                        Haram is pursuing a doctorate in psychology at the University of Florida. She speaks Korean, English and Mandarin. She has been speaking Mandarin for around 15 years. 
+                </p>
+                <p>
+                        She lived in Shanghai, China for 8 years, where she attended middle and high school before returning to Korea for her bachelor's and master's degrees. 
+                </p>
+                <p>
+                        She hopes to continue practicing Mandarin.
+                </p>
+            </div>
+            <div class="chart">
+                    <!--
+                    <div id="bar_chart_div"></div>
+                    -->
+                    <iframe  width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR56E9HP6m_lqNLFjeXIlj9Hzma5yIZ-GZBfHDvU7AHoCVbmFjgcjBdYgHmhFEsKkW5siBVFJxvD9_z/pubchart?oid=1853699583&amp;format=interactive"></iframe>
+                </div>
+                <p><a href="#top" id="b4">Back to Gallery</a></p>           
+        </div>
+    </article>  
+    <article>
+        <div class="subgrid" id="f5">  
+            
+
+            <div class="feat">
+                <iframe  width="560" height="315" src="https://www.youtube.com/embed/v91-5ARD7Y4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <dl>
+                    <dt>Hometown:</dt>
+                    <dd>Tampa, Florida</dd>
+                    <dt>Language:</dt>
+                    <dd>French</dd>
+                </dl>
+                <p class="bio">
+                    Katie works as an immigration adviser at the University of Florida, where she is also working towards a master’s degree in Mass Communications.
+                </p>
+                <p>                     
+                    She began learning French to try to feel a connection to her grandfather, who passed away before she met him. “My grandfather loved French. I thought studying the language might help me understand him.”
+                </p>
+                <p>                    
+                    For Katie, speaking French has provided many opportunities: French has helped her create relationships in countries where it is not the primary language and helped her get by in countries where it is. It has also given 
+                 </p>
+                 <p>                   
+                    Katie’s French really paid dividends when she met a man from Haiti. He seemed reserved—even uneasy and stuttered when he spoke in English. The joy came from his reaction to her asking him in French if he preferred to talk French instead. The similarity between Creole and French made it much easier for him to open up to her.
+                </p>
+                <p>                    
+                    He mentioned that it was difficult for him to communicate in English with the stutter and that he was more comfortable this way. Seeing his face light up and hearing his stutter disappear made learning French worth it to Katie. She helped someone else out and made a new friend in the process.
+                </p>
+                <p>                    
+                    Her advice to language learners:<br>
+                    “Don’t be afraid to make mistakes or sound stupid. Displacement and feeling uncomfortable is a great thing.” 
+                </p>
+                <p>                    
+                    Being around native speakers may seem daunting, but for Katie, immersing yourself in potentially uncomfortable situations is just part of the process. In the end, you will become better for it and you will even gain respect for others who have gone through the same thing to learn your language. 
+                </p>
+            </div>
+            <div class="chart">
+                    <iframe width="604.5" height="373.5127914480604" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSMDnzoXWAyprVLqzEQUVaX8lUKXUCD9iWUAh3j71qqt4LuAOTK__LoUpXW04vsRlnFPSreCLWJfkWL/pubchart?oid=524153909&amp;format=interactive"></iframe>
+                    <p class="caption">Territories with French as an Official Language. Data from <a href="https://en.wikipedia.org/wiki/List_of_territorial_entities_where_French_is_an_official_language">Wikipedia</a>.</p>
+                </div>
+                <p><a href="#top" id="b5">Back to Gallery</a></p>
+        </div>
+    </article>  
+<article>
+        <div class="subgrid" id="f6">  
+            <div class="chart"></div>  
+
+            <div class="feat">
+                <iframe  width="560" height="315" src="https://www.youtube.com/embed/sjPeHPok4Ds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Hunter</h3>
+                <dl>
+                    <dt>Hometown:</dt>
+                    <dd>Coral Springs, Florida</dd>
+                    <dt>Language:</dt>
+                    <dd>French</dd>
+                </dl>
+                <p class="bio">
+                        Hunter started learning French this year. He takes French classes in Gainesville, Florida, but he gets a lot of practice at the Gainesville Language Exchange (GLX), a weekly meetup at a local bar.
+                </p>
+                <p>
+                    He takes the opportunity to meet people from different cultures and practice with other French speakers. 
+                </p>
+                <p>
+                    He was inspired to learn a new language after taking a trip to Europe, where he hitchhiked from Lisbon, Portugal to Frankfurt, Germany. 
+                </p>
+                <p>
+                    His memory of not being able to communicate effectively and truly connect with people who spoke different languages served as his motivation to start learning French. 
+                </p>
+                <p>
+                    There were many missed opportunities to really get to know some of the people along his journey, where he wished he could speak their language. 
+                </p>
+                <p>
+                    And that's why he takes the time to go to GLX. 
+                </p> 
+                <p>
+                    "It just brings language back to its roots. I'm not learning French so I can study and study and study, I'm learning French so I can <em>talk to people</em>."
+                </p>
+                <p><a href="#top" id="b6">Back to Gallery</a></p>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+
+    </main>
+
+    <footer>
+        This website was made for my Digital Storytelling and Coding and Web Apps graduate courses at the University of Florida.
+        <br>
+        &copy; 2019 Felipe De La Guerra.
+    </footer>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    </body>
+</html>
